@@ -2,8 +2,8 @@ FROM debian:buster-slim
 
 LABEL maintainer="m.zackky@gmail.com"
 
-ARG GRPCURL_VERSION=1.4.0
-ARG GRPC_SHA256="71f121bb03d501adcd3c2f946b4914a87133f42ffd6e649b051a9be2cf33690e"
+ARG GRPCURL_VERSION=1.8.1
+ARG GRPC_SHA256="6b6f2ca6536e944b9dfdfa7a50f5afd2f91e87b5606fd744b6a41f55acdfebbb"
 ENV GRPCURL_VERSION=$GRPCURL_VERSION
 ENV GRPC_SHA256=$GRPC_SHA256
 
@@ -35,10 +35,12 @@ RUN apt-get update \
     gnupg \
     gpg \
     gzip \
+    httpie \
     inetutils-ping \	
     inetutils-telnet \
     inetutils-tools \
     inetutils-traceroute \
+    influxdb-client \
     locales \
     mercurial \
     mariadb-client \
